@@ -11,7 +11,7 @@ abstract class Employee {
         this.tasks = [];
     }
 
-    // The work() function has to cycle trough the list of tasks and print the current one.
+    // * The work() function has to cycle trough the list of tasks and print the current one.
     public work(): void {
         const currentTask = this.tasks.shift();
         this.tasks.push(currentTask);

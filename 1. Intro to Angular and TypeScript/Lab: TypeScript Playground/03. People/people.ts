@@ -11,7 +11,7 @@ abstract class Employee {
         this.tasks = [];
     }
 
-    // The work() function has to cycle trough the list of tasks and print the current one. 
+    // The work() function has to cycle trough the list of tasks and print the current one.
     public work(): void {
         const currentTask = this.tasks.shift();
         this.tasks.push(currentTask);
@@ -28,23 +28,20 @@ abstract class Employee {
 }
 
 export class Junior extends Employee {
-
     constructor(name: string, age: number) {
-        super(name, age)
+        super(name, age);
         this.salary = 2000;
-        this.tasks.push(' is working on a simple task');
+        this.tasks.push(" is working on a simple task");
     }
 }
 
 export class Senior extends Employee {
-
     constructor(name: string, age: number) {
         super(name, age);
         this.salary = 6000;
-        this.tasks.push(' is working on a complicated task.')
-        this.tasks.push(' is taking time off work.')
-        this.tasks.push(' is supervising junior workers.')
-
+        this.tasks.push(" is working on a complicated task.");
+        this.tasks.push(" is taking time off work.");
+        this.tasks.push(" is supervising junior workers.");
     }
 }
 
@@ -55,8 +52,8 @@ export class Manager extends Employee {
         super(name, age);
         this.salary = 8000;
         this.divident = 3000;
-        this.tasks.push(' scheduled a meeting.')
-        this.tasks.push(' is preparing a quarterly report.')
+        this.tasks.push(" scheduled a meeting.");
+        this.tasks.push(" is preparing a quarterly report.");
     }
 
     public getSalary(): number {
@@ -64,12 +61,10 @@ export class Manager extends Employee {
     }
 }
 
-
-
 // Create employee instances
-const juniorEmployee = new Junior('John Doe', 25);
-const seniorEmployee = new Senior('Jane Smith', 30);
-const managerEmployee = new Manager('Michael Johnson', 35);
+const juniorEmployee = new Junior("John Doe", 25);
+const seniorEmployee = new Senior("Jane Smith", 30);
+const managerEmployee = new Manager("Michael Johnson", 35);
 
 // Perform work tasks
 juniorEmployee.work();

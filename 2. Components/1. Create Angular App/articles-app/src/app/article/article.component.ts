@@ -23,7 +23,7 @@ export class ArticleComponent {
   };
 
   readMore(): void {
-    this.articleDescLen  == this.symbols;
+    this.articleDescLen += this.symbols;
     if(this.articleDescLen >= this.articleDesc.length) {
       this.showHideBtn = true;
       this.showReadMoreBtn = false;
